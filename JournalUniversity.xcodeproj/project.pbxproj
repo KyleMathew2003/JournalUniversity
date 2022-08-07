@@ -14,6 +14,7 @@
 		CBF5AD7828A03DD400B97B50 /* JournalUniversityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5AD7728A03DD400B97B50 /* JournalUniversityTests.swift */; };
 		CBF5AD8228A03DD500B97B50 /* JournalUniversityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5AD8128A03DD500B97B50 /* JournalUniversityUITests.swift */; };
 		CBF5AD8428A03DD500B97B50 /* JournalUniversityUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5AD8328A03DD500B97B50 /* JournalUniversityUITestsLaunchTests.swift */; };
+		CBF5AD9228A0422800B97B50 /* RoundedShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5AD9128A0422800B97B50 /* RoundedShapes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		CBF5AD7D28A03DD400B97B50 /* JournalUniversityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JournalUniversityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF5AD8128A03DD500B97B50 /* JournalUniversityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalUniversityUITests.swift; sourceTree = "<group>"; };
 		CBF5AD8328A03DD500B97B50 /* JournalUniversityUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalUniversityUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CBF5AD9128A0422800B97B50 /* RoundedShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShapes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		CBF5AD6528A03DD300B97B50 /* JournalUniversity */ = {
 			isa = PBXGroup;
 			children = (
+				CBF5AD9028A0421300B97B50 /* Assets */,
 				CBF5AD6628A03DD300B97B50 /* JournalUniversityApp.swift */,
 				CBF5AD6828A03DD300B97B50 /* ContentView.swift */,
 				CBF5AD6A28A03DD400B97B50 /* Assets.xcassets */,
@@ -125,6 +128,14 @@
 				CBF5AD8328A03DD500B97B50 /* JournalUniversityUITestsLaunchTests.swift */,
 			);
 			path = JournalUniversityUITests;
+			sourceTree = "<group>";
+		};
+		CBF5AD9028A0421300B97B50 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CBF5AD9128A0422800B97B50 /* RoundedShapes.swift */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBF5AD9228A0422800B97B50 /* RoundedShapes.swift in Sources */,
 				CBF5AD6928A03DD300B97B50 /* ContentView.swift in Sources */,
 				CBF5AD6728A03DD300B97B50 /* JournalUniversityApp.swift in Sources */,
 			);
