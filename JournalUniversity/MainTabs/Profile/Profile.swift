@@ -145,19 +145,44 @@ struct Profile: View {
                     .frame(height:imageHeight)
                         .zIndex(1)
                     
-                    VStack{
+                    VStack(spacing:2){
                         HStack {
                             Text("Followers: 2020")
-                                .foregroundColor(.white)
                             Spacer(minLength: 10)
-                            
                             Text("Following: 2020")
                         }
-                        .font(.caption2)
+                        .font(.custom("Following", size: UIScreen.main.bounds.width/27))
                         .foregroundColor(.white)
-                        .padding(.horizontal,8)
+                        .padding(.horizontal,10)
+                        Text("Kyle T Mathew")
+                            .font(.custom("Name", size: UIScreen.main.bounds.width/17)
+                            )
+                            .foregroundColor(.white)
+                        Text("JournalU CEO")
+                            .foregroundColor(.white)
+                            .font(.custom("Title", size: UIScreen.main.bounds.width/21))
+                        HStack{
+                            Text("Full Stack developer and future economist, looking to use his skills to get into grad school, and eventually earn a PhD from one of the best universities ever, UChicago.")
+                            Spacer(minLength: 0)
+                        }
+                        .padding(.leading,10)
+                        .padding(.horizontal,15)
+                        .foregroundColor(.white)
+                        HStack{
+                            Text("Joined on: 08-07-2022")
+                            Spacer()
+                            Text("Studies Published: 20")
+                        }
+                        .padding(.top,8)
+                        .font(.custom("ProfileData", size: UIScreen.main.bounds.width/30))
+                        .padding(.horizontal,10)
+                        .foregroundColor(.white)
+                        
+                        
+                        
                     }
                     .zIndex(0)
+                   
                     
 
                 }
@@ -176,9 +201,11 @@ struct Profile: View {
 struct Profile_Previews: PreviewProvider {
     static var previews: some View {
         Group {
+           
             Profile()
+                .previewInterfaceOrientation(.portrait)
+                .previewLayout(.device)
                 .previewDevice("iPhone 11")
-            Profile()
             Profile()
                 .previewDevice("iPod touch (7th generation)")
         }
