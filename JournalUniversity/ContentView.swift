@@ -13,7 +13,6 @@ struct ContentView: View {
     @State var oldSelectedIndex = 0
 
     var body: some View {
-        NavigationView {
             TabView(selection: $MainTabSelectedIndex){
                 Home()
                     .onAppear{
@@ -53,8 +52,6 @@ struct ContentView: View {
                     }
             }
             .fullScreenCover(isPresented: $ShowactionSheet, content: Add.init)
-            .navigationBarHidden(true)
-        }
     }
 }
 

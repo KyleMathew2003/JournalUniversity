@@ -11,28 +11,10 @@ struct Add: View {
     var body: some View {
         NavigationView{
             VStack{
-                Button{
-                    
-                } label:{
-                    Text("Search")
-                        .foregroundColor(.gray)
-                    Spacer()
-                }
-                .padding(.horizontal)
-                .background(
-                RoundedRectangle(cornerRadius: 25)
-                    .stroke(lineWidth: 0.8)
-                    .foregroundColor(.gray)
-                    .frame(height:25)
-                    
-                )
-                .padding(.horizontal)
                 Spacer()
             }
             .frame(maxWidth:.infinity,maxHeight: .infinity)
-            
             .background(Color("BackgroundColor"))
-            
             .navigationBarHidden(true)
         }
     }

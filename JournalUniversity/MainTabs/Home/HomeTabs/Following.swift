@@ -9,9 +9,14 @@ import SwiftUI
 
 struct Following: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .foregroundColor(.white)
-    }
+        ScrollView{
+            VStack{
+                ForEach(0...5,id:\.self){_ in
+                    StudiesCardView(BannerText: "2022 Journal of Economics", shouldPresent: .constant(true))
+                }
+            }
+        }
+        .background(Color("BackgroundColor"))    }
 }
 
 struct Following_Previews: PreviewProvider {

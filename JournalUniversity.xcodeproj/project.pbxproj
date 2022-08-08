@@ -25,6 +25,7 @@
 		CBF5ADB228A056DD00B97B50 /* Following.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5ADB128A056DD00B97B50 /* Following.swift */; };
 		CBF5ADB528A0571000B97B50 /* Journals.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5ADB428A0571000B97B50 /* Journals.swift */; };
 		CBF5ADB728A0572000B97B50 /* Associations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5ADB628A0572000B97B50 /* Associations.swift */; };
+		CBF5ADBA28A05E3500B97B50 /* StudiesCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5ADB928A05E3500B97B50 /* StudiesCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		CBF5ADB128A056DD00B97B50 /* Following.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Following.swift; sourceTree = "<group>"; };
 		CBF5ADB428A0571000B97B50 /* Journals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journals.swift; sourceTree = "<group>"; };
 		CBF5ADB628A0572000B97B50 /* Associations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Associations.swift; sourceTree = "<group>"; };
+		CBF5ADB928A05E3500B97B50 /* StudiesCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudiesCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		CBF5AD6528A03DD300B97B50 /* JournalUniversity */ = {
 			isa = PBXGroup;
 			children = (
+				CBF5ADB828A05E0300B97B50 /* ViewBlocks */,
 				CBF5ADAB28A0567400B97B50 /* SkeletonViews */,
 				CBF5AD9328A04CBC00B97B50 /* MainTabs */,
 				CBF5AD9028A0421300B97B50 /* Assets */,
@@ -238,6 +241,14 @@
 				CBF5ADB628A0572000B97B50 /* Associations.swift */,
 			);
 			path = CommunitiesTabs;
+			sourceTree = "<group>";
+		};
+		CBF5ADB828A05E0300B97B50 /* ViewBlocks */ = {
+			isa = PBXGroup;
+			children = (
+				CBF5ADB928A05E3500B97B50 /* StudiesCardView.swift */,
+			);
+			path = ViewBlocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +393,7 @@
 				CBF5ADB728A0572000B97B50 /* Associations.swift in Sources */,
 				CBF5ADB028A056D000B97B50 /* Explore.swift in Sources */,
 				CBF5AD6928A03DD300B97B50 /* ContentView.swift in Sources */,
+				CBF5ADBA28A05E3500B97B50 /* StudiesCardView.swift in Sources */,
 				CBF5AD6728A03DD300B97B50 /* JournalUniversityApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
