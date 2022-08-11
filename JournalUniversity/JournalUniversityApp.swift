@@ -11,7 +11,6 @@ import SwiftUI
 struct JournalUniversityApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-        }
-    }
+            Profile()
 }
+    }}

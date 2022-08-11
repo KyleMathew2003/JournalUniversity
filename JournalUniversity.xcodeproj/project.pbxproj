@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB0C7D0428A2C7E30079E23C /* SnappingHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0C7D0328A2C7E30079E23C /* SnappingHStack.swift */; };
 		CBF5AD6728A03DD300B97B50 /* JournalUniversityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5AD6628A03DD300B97B50 /* JournalUniversityApp.swift */; };
 		CBF5AD6928A03DD300B97B50 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5AD6828A03DD300B97B50 /* ContentView.swift */; };
 		CBF5AD6B28A03DD400B97B50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF5AD6A28A03DD400B97B50 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB0C7D0328A2C7E30079E23C /* SnappingHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnappingHStack.swift; sourceTree = "<group>"; };
 		CBF5AD6328A03DD300B97B50 /* JournalUniversity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JournalUniversity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF5AD6628A03DD300B97B50 /* JournalUniversityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalUniversityApp.swift; sourceTree = "<group>"; };
 		CBF5AD6828A03DD300B97B50 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB0C7D0228A2C7CE0079E23C /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				CB0C7D0328A2C7E30079E23C /* SnappingHStack.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
 		CBF5AD5A28A03DD300B97B50 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 		CBF5AD6528A03DD300B97B50 /* JournalUniversity */ = {
 			isa = PBXGroup;
 			children = (
+				CB0C7D0228A2C7CE0079E23C /* ViewModifiers */,
 				CBF5ADB828A05E0300B97B50 /* ViewBlocks */,
 				CBF5ADAB28A0567400B97B50 /* SkeletonViews */,
 				CBF5AD9328A04CBC00B97B50 /* MainTabs */,
@@ -389,6 +400,7 @@
 				CBF5ADA828A04D9300B97B50 /* Add.swift in Sources */,
 				CBF5ADB228A056DD00B97B50 /* Following.swift in Sources */,
 				CBF5AD9228A0422800B97B50 /* RoundedShapes.swift in Sources */,
+				CB0C7D0428A2C7E30079E23C /* SnappingHStack.swift in Sources */,
 				CBF5ADA428A04D8100B97B50 /* Home.swift in Sources */,
 				CBF5ADB728A0572000B97B50 /* Associations.swift in Sources */,
 				CBF5ADB028A056D000B97B50 /* Explore.swift in Sources */,

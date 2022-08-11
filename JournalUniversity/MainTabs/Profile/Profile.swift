@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct Profile: View {
+    
+    @State var newOffset: CGFloat = 0
+    
+    @State var scrollOffset: CGFloat = 585
+
+    
+    @State var selectedIndex:Int = 0
+    @State var selectedProfilePostsTypes:ProfilePostsTypes = .studies
+    
+    
     private let imageHeight: CGFloat = UIScreen.main.bounds.width/2.4
     private let collapsedHeight: CGFloat = UIScreen.main.bounds.height/10
-    
-    
     
     private func ScrollOffset(_ geometry:GeometryProxy) -> CGFloat {
         geometry.frame(in: .global).minY
     }
+    
+    
     private func getOpacity(_ geometry: GeometryProxy) -> CGFloat{
         let offset = ScrollOffset(geometry)
         
@@ -158,6 +168,7 @@ struct Profile: View {
                             .font(.custom("Name", size: UIScreen.main.bounds.width/17)
                             )
                             .foregroundColor(.white)
+                            .padding(.top,10)
                         Text("JournalU CEO")
                             .foregroundColor(.white)
                             .font(.custom("Title", size: UIScreen.main.bounds.width/21))
@@ -177,14 +188,83 @@ struct Profile: View {
                         .font(.custom("ProfileData", size: UIScreen.main.bounds.width/30))
                         .padding(.horizontal,10)
                         .foregroundColor(.white)
-                        
-                        
-                        
+                        VStack{
+                            Divider()
+                                .frame(height:0.5)
+                                .overlay(.gray)
+                                .opacity(0.5)
+                                .padding(.top,5)
+                            HStack{
+                                ForEach(ProfilePostsTypes.allCases,id:\.rawValue) { item in
+                                    VStack (spacing:4){
+                                        Image(systemName: selectedProfilePostsTypes == item ? item.fillImage:item.unfillImage)
+                                            .resizable()
+                                        .scaledToFit()
+                                        .frame(height: selectedProfilePostsTypes == item ? 15:13)
+                                        Text(item.Title)
+                                            .font(selectedProfilePostsTypes == item ? .caption:.caption2)
+                                            .fontWeight(selectedProfilePostsTypes == item ? .bold:.regular)
+                                    }
+                                    .foregroundColor(.white)
+                                    .frame(maxWidth:.infinity)
+                                    .onTapGesture {
+                                        withAnimation{
+                                            self.selectedProfilePostsTypes = item
+                                            self.selectedIndex = item.Index
+                                            scrollOffset = (-1*CGFloat(CGFloat(item.Index)+1) * UIScreen.main.bounds.width) + UIScreen.main.bounds.width * 2.5
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            Divider()
+                                .frame(height:0.5)
+                                .overlay(.gray)
+                                .opacity(0.5)
+                                .padding(.bottom,5)
+                              
+                          
+                            HStack(spacing:0){
+                                VStack {
+                                    ForEach(0...1,id:\.self) {_ in
+                                        StudiesCardView(shouldPresent: .constant(true))
+                                            .frame(width: UIScreen.main.bounds.width)
+                                    }
+                                    Spacer()
+                                }
+                                        
+                                VStack {
+                                    ForEach(0...1,id:\.self) {_ in
+                                        StudiesCardView(shouldPresent: .constant(true))
+                                            .frame(width: UIScreen.main.bounds.width)
+                                    }
+                                    Spacer()
+                                }
+                                        
+                                VStack {
+                                    ForEach(0...1,id:\.self) {_ in
+                                        StudiesCardView(shouldPresent: .constant(true))
+                                            .frame(width: UIScreen.main.bounds.width)
+                                    }
+                                    Spacer()
+                                }
+                                       
+                                VStack {
+                                    ForEach(0...1,id:\.self) {_ in
+                                        StudiesCardView(shouldPresent: .constant(true))
+                                            .frame(width: UIScreen.main.bounds.width)
+                                    }
+                                    Spacer()
+                                }
+                                        
+                               
+                                }
+                            .modifier(SnappingHStackModifier(itemCount: 4,itemWidth: UIScreen.main.bounds.width,itemSpacing: 0,ButtonOffset: $newOffset, scrollOffset: $scrollOffset, selectedProfilePostTypes: $selectedProfilePostsTypes, selectedIndex: $selectedIndex))
+                                .frame(width:UIScreen.main.bounds.width)
+                                .foregroundColor(.white)
+                        }
                     }
                     .zIndex(0)
-                   
-                    
-
                 }
 
                 .background(Color("BackgroundColor"))
@@ -196,6 +276,54 @@ struct Profile: View {
             
         }
     }
+}
+
+extension AnyTransition {
+    static var backslide: AnyTransition{
+        AnyTransition.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading))
+    }
+}
+enum ProfilePostsTypes: Int, CaseIterable{
+    case studies
+    case comments
+    case liked
+    case saved
+    
+    
+    var Index: Int{
+        switch self{
+        case .studies: return 0
+        case .comments: return 1
+        case .liked: return 2
+        case .saved: return 3
+        }
+    }
+    var unfillImage: String{
+        switch self{
+        case .studies: return "book"
+        case .comments: return "message"
+        case .liked: return "heart"
+        case .saved: return "bookmark"
+        }
+    }
+    var fillImage: String{
+        switch self{
+        case .studies: return "book.fill"
+        case .comments: return "message.fill"
+        case .liked: return "heart.fill"
+        case .saved: return "bookmark.fill"
+        }
+    }
+    var Title: String{
+        switch self{
+        case .studies: return "Studies"
+        case .comments: return "Comments"
+        case .liked: return "Liked"
+        case .saved: return "Saved"
+        }
+ 
+    }
+    
 }
 
 struct Profile_Previews: PreviewProvider {
